@@ -1,0 +1,268 @@
+#container {
+	text-align: center;
+
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#container strong {
+	font-size: 20px;
+	line-height: 26px;
+}
+
+#container p {
+	font-size: 16px;
+	line-height: 22px;
+
+	color: #8c8c8c;
+
+	margin: 0;
+}
+
+#container a {
+	text-decoration: none;
+}
+.example-box {
+	width: 200px;
+	height: 200px;
+	border: solid 1px #ccc;
+	color: rgba(0, 0, 0, 0.87);
+	cursor: move;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: #fff;
+	border-radius: 4px;
+	position: relative;
+	z-index: 1;
+	transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
+	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+		0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.example-box:active {
+	box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+		0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+#rotate-area {
+	height: 75%;
+	padding: 1rem;
+	overflow: hidden;
+	touch-action: none;
+}
+
+#arrow {
+	display: block;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+}
+
+#angle-info {
+	color: #666;
+	font-size: 2em;
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+}
+.my-width {
+	width: 300px;
+}
+#drag-1,
+#drag-2 {
+	width: 25%;
+	min-height: 6.5em;
+	margin: 1rem 0 0 1rem;
+	background-color: #29e;
+	color: white;
+	border-radius: 0.75em;
+	padding: 4%;
+	touch-action: none;
+	user-select: none;
+	-webkit-transform: translate(0px, 0px);
+	transform: translate(0px, 0px);
+}
+
+.dropdown-check-list {
+	display: inline-block;
+}
+
+.dropdown-check-list .anchor {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	padding: 5px 50px 5px 10px;
+	border: 1px solid #ccc;
+}
+
+.dropdown-check-list .anchor:after {
+	position: absolute;
+	content: "";
+	border-left: 2px solid black;
+	border-top: 2px solid black;
+	padding: 5px;
+	right: 10px;
+	top: 20%;
+	-moz-transform: rotate(-135deg);
+	-ms-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+}
+
+.dropdown-check-list .anchor:active:after {
+	right: 8px;
+	top: 21%;
+}
+
+.dropdown-check-list ul.items {
+	padding: 2px;
+	display: none;
+	margin: 0;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+
+.dropdown-check-list ul.items li {
+	list-style: none;
+}
+
+.dropdown-check-list.visible .anchor {
+	color: #0094ff;
+}
+
+.dropdown-check-list.visible .items {
+	display: block;
+}
+
+.cajita {
+	position: relative;
+	background-color: #4be091;
+	border-radius: 6px;
+	box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+		rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+		rgba(240, 46, 170, 0.05) 25px 25px;
+}
+.cajitaInvertida {
+	position: relative;
+	background-color: #4be091;
+	border-radius: 6px;
+	box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+		rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+		rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+.rotation-handle {
+	padding: 3px 4px;
+	display: table;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	bottom: -35px;
+	background-color: #ff1661;
+	border-radius: 10rem;
+	line-height: 1;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	cursor: move;
+}
+.positionAbsolute {
+	position: absolute;
+}
+.positionAbsoluteTituloPersonaje {
+	position: absolute;
+}
+
+.positionRelative {
+	position: static;
+}
+.zindex {
+	z-index: 0;
+}
+
+.zindex1 {
+	z-index: 1;
+}
+
+.resize-container {
+	width: 100%;
+	height: 360px;
+	background-color: #e8e9e8;
+	position: relative;
+}
+
+.canvasStyle {
+	box-shadow: 5px 5px 10px;
+}
+
+.ion-card {
+	width: 100px;
+	height: 100px;
+}
+
+.botonArratrar {
+	transform: translate(-770px, 0px);
+}
+.botonResize {
+	transform: translate(-570px, 0px);
+}
+.botonGirar {
+	transform: translate(-0px, 0px);
+}
+.textoEscrito {
+	transform: translate(-40px, 10px);
+}
+
+.textoAtras {
+	transform: translate(-40px, 0px);
+}
+
+.seleccionaTexto {
+	transform: translate(820px, -230px);
+}
+.seleccionaTexto2 {
+	transform: translate(705px, -230px);
+}
+.hideBocadillo {
+	display: none;
+}
+.fondoMover {
+	transform: translate(40px, 0px);
+	width: 15%;
+}
+.moverCrearPagina {
+	transform: translate(650px, 0px);
+}
+.ion-title {
+	font-size: 1em;
+}
+
+.responsivePersonajes {
+	width: 15%;
+	height: auto;
+}
+.responsiveImageObject {
+	width: 10%;
+	height: auto;
+}
+.resposniveButtons {
+	width: 100%;
+	height: auto;
+}
+.responsiveImage {
+	width: 1%;
+	height: auto;
+}
+.canvasSize {
+	width: 500px;
+}
+.canvasSizeOriginal {
+	width: 1000px;
+	height: 500px;
+}

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>memoramagame</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <div *ngIf="preparado && Cartaspartedetras">
+    
+    <div>
+      contador:
+    </div>  
+    <p id="contador">0</p>
+      <div class="grid-container">
+
+        <div  (click)="click(i)" class="grid-item" *ngFor="let elem of Cartaspartedetras;let i = index">
+                    
+              <img  class = "redimensiondetras" [src]="Cartaspartedetras[i]" >
+              <img  class = "redimensiondelante" [src]="damecartasdelafamilia[i]">
+          
+        </div>
+      
+      </div>
+   </div>
+</ion-content>

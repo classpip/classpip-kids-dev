@@ -1,0 +1,462 @@
+:root{
+    --w: calc(70vw/5);
+    --h: calc(70vh/2);
+  }
+  
+  *{
+    transition: all 0.5s;
+  }
+  
+  
+   body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid;
+    position: relative;
+    background-color: white;
+ 
+   }
+ 
+  p{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    font-family: fantasy;
+    font-size: 3cm;
+    justify-content: center;
+    align-items: center;
+    // border: 3px solid;
+    margin-top: 580px;
+    border: 2px solid;
+    background-color: white;
+    border-radius: 9px;
+
+    
+
+  }
+  
+  .fondodepantalla{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #005C98, #505BDA);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-image: url(fondo-selva-plana-organica_23-2148952811.png);
+    background-repeat: round;
+
+  }
+
+  #principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --background: url(fondo-selva-plana-organica_23-2148952811.png) 0 0/100% 100% no-repeat;
+    
+
+}
+
+  
+  .area-tarjeta,
+   .tarjeta,
+   img.redimensiondetras,
+   img.redimensiondelante,
+   .cara
+   {
+    cursor: pointer;
+    // width: 125px;
+    // height: 175px;
+    // min-width: 80px;
+
+    width: 145px;
+    height: 225px;
+    //min-width: 180px;
+  }
+  
+  .tarjeta{
+    position: relative;
+    transform-style: preserve-3d;
+    //animation-name:  tarjetasmovimiento;
+    animation-duration: 0.5s;
+    // animation-delay: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes temporizador {
+    0% {
+      color: red;
+      transform: scale(1);
+  }
+  25% {
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+  }
+  
+  50% {
+    color: red;
+    transform: scale(1.15);
+  }
+  75% {
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+  }
+  100% {
+    color: red;
+    transform: scale(1);
+  }
+  }
+
+  @keyframes tarjetasmovimiento{
+    0% {
+      left: 0px;
+      top: 0px;
+  }
+  25% {
+      left: 5px;
+      top: 0%;
+  }
+  
+  50% {
+      left: 0px;
+      top: 0px;
+  }
+  75% {
+      left: -5px;
+      top: 0%;
+  }
+  100% {
+      left: 0px;
+      top: 0px;
+  }
+
+  }
+
+  @keyframes Expansion-Contraccion {
+
+    0% {
+      // transform: scale(1);
+      scale: 1;
+  }
+  25% {
+      // transform: scale(1.1);
+      scale: 1.1;
+
+  }
+  50% {
+      // transform: scale(1.15);
+      scale: 1.15;
+
+  }
+  75% {
+      // transform: scale(1.1);
+      scale: 1.1;
+
+  }
+  100% {
+      // transform: scale(1);
+      scale: 1;
+
+  }
+    
+  }
+
+  @keyframes Expansion {
+
+    0% {
+    
+      transform: scale(0.15);
+     
+      
+  }
+  25% {
+      // transform: scale(1.1);
+      transform: scale(0.25);
+     
+  }
+  50% {
+      // transform: scale(1.15);
+      transform: scale(0.5);
+     
+
+  }
+  75% {
+      // transform: scale(1.1);
+      transform: scale(0.75);
+
+  }
+  87%{
+    transform: scale(1.15);
+
+  }
+  100% {
+      // transform: scale(1);
+
+      transform: scale(1);
+
+  }
+    
+  }
+  
+
+  .cara{
+    
+    position: absolute;
+    backface-visibility: hidden;
+    //BORDE
+    border-radius:20px;
+    border:white 5px solid;
+    // TAMAÑO ICONO
+    font-size:500%;
+    // PARA PODER MODIFICAR EL ICONO CENTRO
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .trasera{
+    background-color: blue;
+    transform: rotateY(180deg);
+  }
+  
+  .superior{
+    background-color: orangered;
+  }
+  .nuevoJuego{
+      background-color: white;
+      border-radius:20px;
+      border:rgb(0, 0, 0) 5px solid;
+      position: absolute;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -60px;
+      margin-left: 695px;
+      font-size: x-large;
+      padding: 5px;
+      width: 14%;
+      height: 50px;
+
+  }
+
+
+  .grid-container { //memory_game
+  padding: 15px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap:20px;
+  border: 15px solid dimgrey;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+  //margin-bottom: 90px;
+  background-color: white;
+  border-style: groove;
+  animation-duration: 1s;
+  // animation-delay: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes iniciar{
+    20%,90%{
+        transform: rotateY(180deg);
+    }
+    0%,100%{
+        transform: rotateY(0deg);
+    }
+}
+
+img.redimensiondetras { //back-face
+  // width: 160px;
+  // height: 255px;
+  //width: 150px;
+  //height: 218px;
+  // position: absolute;
+  background:white;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  border: 5px solid black;
+
+}
+
+img.redimensiondelante { //front-face
+ // width: 150px;
+ // height: 210px;
+  border-radius: 30px;
+  transform:rotateY(180deg);
+  
+
+}
+.resultado{
+ // text-align: center;
+ // margin-top: 200px;
+  z-index: 1;
+  position: absolute;
+  //justify-content: center;
+ // display: flex;
+  border: 15px solid rgb(15, 15, 14);
+  background-color: #f3eded;
+  padding: 35px;
+  border-radius: 15px;
+  font-family: cursive;
+  //align-items: center;
+  // opacity: 1%;
+  animation-duration: 4s;
+    // animation-delay: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    opacity: 1%;
+    border-style: groove;
+    font-size: larger;
+
+}
+
+h1{
+  font-size: 18px;
+}
+
+div2{
+    
+  margin-bottom: 30px;
+}
+
+.resultado2{
+
+   z-index: 1;
+   position: absolute;
+   border: 15px solid rgb(12, 12, 11);
+   background-color: rgb(227, 233, 231);
+   padding: 35px;
+   border-radius: 15px;
+   font-family: cursive;
+   max-width: 635px;
+   //align-items: center;
+   // opacity: 1%
+     border-style: groove;
+     font-size: larger;
+ 
+ }
+
+//ID
+// .item1 { grid-area: header; }
+// .item3 { grid-area: main; }
+// .item4 { grid-area: right; }
+
+  .nuevoJuegot {
+    // display: grid;
+    // grid-template-areas:
+    // 'header header header header '
+    // 'main main right right';
+    //grid-gap: 3px;
+    background-color:rgb(255, 255, 255);
+    //padding: 6px;
+    //width: 11%;
+    margin-top: -70px;
+   // position: absolute;
+    height: 50px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 10px;
+
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
+    // margin-left: 600px;
+    font-size: larger;
+    width: 30%;
+  }
+
+  
+  .nuevoJuegot > div {
+    background-color: white;
+    text-align: center;
+    //padding: 5px 0;
+   // font-size: 10px;
+  }
+
+  .temp{
+    background-color: white;
+    border-radius: 20px;
+    border: rgb(0, 0, 0) 5px solid;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
+  
+    margin-left: 400px;
+    animation-duration: 0.5s;
+    // animation-delay: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    //font-size: x-large;
+    padding: 5px;
+
+    font-size: 20px;
+    width: 20%;
+    height: 50px;
+  }
+
+
+#ayuda{
+  // position: inherit;
+  // margin-bottom: 360px;
+  // margin-left: 650px;
+}
+
+
+.banner_img{
+  animation: movimiento 2.5s linear infinite;
+  position: absolute;
+}
+
+.banner_img img{
+  width: 600px;
+  display: block;
+}
+
+@keyframes color{
+  0%{
+      background-color: rgb(255, 208, 0);
+  }
+  25%{
+    background-color: white;
+
+  }
+  50%{
+    background-color: rgb(255, 251, 0);
+  }
+  75%{
+    background-color: white;
+  }
+  100%{
+    background-color:  rgb(255, 251, 0);
+  }
+}
+
+@keyframes movimiento{
+  0%{
+      transform: translateY(0);
+  }
+  50%{
+      transform: translateY(30px);
+  }
+  100%{
+      transform: translateY(0);
+  }
+}
+// #serpiente{
+//   background-image: url(/src/serpiente.png);
+// }
+
+  

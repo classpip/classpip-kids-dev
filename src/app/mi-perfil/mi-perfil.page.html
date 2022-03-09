@@ -1,0 +1,125 @@
+
+
+<ion-content fullscreen="true" slot="fixed"  *ngIf = "perfil">
+  <ion-list-header class="texto3" >
+    PERFIL
+  </ion-list-header>
+    <div class="card">
+      <div class="header">
+        <div class="avatar">
+          <!--<img src="{{perfil.ImagenPerfil}}" alt="">-->
+          <img src="../../assets/icon/user.png" alt="">
+        </div>
+      </div>
+
+      <div class="card-body" >
+        <div class="user-meta ion-text-center">
+          <h3 class="playername">{{perfil.Nombre}} {{perfil.PrimerApellido}} {{perfil.SegundoApellido}} </h3>
+          <h5 class="country">{{perfil.Email}}</h5>
+          
+          <ion-list >
+            
+
+            
+            <ion-label >
+              <h2 class="texto1" >Nombre</h2>
+             <ion-input  class="textoInput" style="border-bottom: 1px solid rgb(216, 213, 213);" type="text" value="" name="nombre" placeholder="Nombre" requiered [(ngModel)]="perfil.Nombre" (ngModelChange)= "cambio = true"></ion-input>
+            </ion-label>
+       
+
+          
+            <ion-label>
+              <h2 class="texto1">Primer Apellido</h2>
+              <ion-input class="textoInput" type="text" style="border-bottom: 1px solid rgb(216, 213, 213);" name="primerApellido" placeholder="Primer apellido" requiered [(ngModel)]="perfil.PrimerApellido" (ngModelChange)= "cambio = true"></ion-input>               
+            </ion-label>
+          
+
+         
+            <ion-label>
+              <h2 class="texto1">Segundo Apellido</h2>
+              <ion-input class="textoInput" type="text" style="border-bottom: 1px solid rgb(216, 213, 213);" name="segundoApellido" placeholder="Segundo apellido" requiered [(ngModel)]="perfil.SegundoApellido" (ngModelChange)= "cambio = true"></ion-input>              
+            </ion-label>
+
+
+            <ion-label>
+              <h2 class="texto1">Nombre de usuario</h2>
+              <ion-input class="textoInput" type="text" style="border-bottom: 1px solid rgb(216, 213, 213);" name="username" placeholder="Nombre de usuario" requiered [(ngModel)]="perfil.Username" (ngModelChange)= "cambio = true"></ion-input>            
+            </ion-label>
+
+          
+
+
+              <ion-label>
+                <h2 class="texto1" >Email</h2>
+                <ion-input class="textoInput" type="text" style="border-bottom: 1px solid rgb(216, 213, 213);" name="email" placeholder="email" requiered [(ngModel)]="perfil.Email" (ngModelChange)= "cambio = true"></ion-input>             
+              </ion-label>
+
+
+                        
+
+              <ion-label>
+                <h2 class="texto1" >Contraseña</h2>
+                <ion-input class="textoInput"  type="text" style="border-bottom: 1px solid rgb(216, 213, 213);" name="contrasena" placeholder="Contraseña" requiered [(ngModel)]="perfil.Password" (ngModelChange)= "cambio = true; cambioPass = true"></ion-input>    
+              </ion-label>
+
+              <ion-label *ngIf = "cambioPass" lines="none">
+                <h2 class="texto1" >Repite contraseña </h2>
+                <ion-input class="textoInput" type="text" style="border-bottom: 1px solid rgb(216, 213, 213);" name="contrasenaRep"  placeholder="Repite la contraseña" requiered [(ngModel)]="contrasenaRep" (ngModelChange)= "cambio = true"></ion-input>
+              </ion-label>
+
+              <ion-button *ngIf = "cambio" style="justify-content: center;" (click)="CambiarDatos();" class="ranking-btn">Cambiar tus datos</ion-button>
+
+
+
+
+           <!-- <ion-item >              
+              <ion-label>
+                <h2 class="texto1" >Nombre</h2>
+                <h3 class="texto2">{{perfil.Nombre}}</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h2 class="texto1">Primer Apellido</h2>
+                <h3 class="texto2">{{perfil.PrimerApellido}}</h3>                
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h2 class="texto1">Segundo Apellido</h2>
+                <h3 class="texto2">{{perfil.SegundoApellido}}</h3>                
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h2 class="texto1">Nombre de usuario</h2>
+                <h3 class="texto2">{{perfil.Username}}</h3>                
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h2 class="texto1" >Email</h2>
+                <h3 class="texto2">{{perfil.Email}}</h3>                
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h2 class="texto1">Contraseña</h2>
+                <h3 class="texto2">{{perfil.Password}}</h3>             
+              </ion-label>
+            </ion-item>
+            -->
+          </ion-list>
+       
+
+        </div>
+
+
+     </div>
+
+    </div>
+
+
+    <ion-button class='backbutton' (click)="irMenuPrincipal()" ><ion-icon  name="arrow-back-sharp"> </ion-icon>BACK </ion-button>
+    
+</ion-content>

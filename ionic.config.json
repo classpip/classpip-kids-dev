@@ -1,0 +1,7 @@
+{
+  "name": "miapp22",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

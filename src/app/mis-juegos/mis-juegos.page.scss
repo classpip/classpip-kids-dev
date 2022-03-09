@@ -1,0 +1,56 @@
+
+
+
+
+ion-list-header{
+    font-weight: bold;
+
+}
+
+
+
+ion-content{
+    --background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+.background{
+    --background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+
+
+
+.texto1{
+
+    color: #0408db;
+    justify-content: center;
+   // font-weight: bold;
+    
+}
+
+.texto2{
+
+    font-weight: bold;
+    
+}
+
+.texto3{
+
+    color: rgb(255, 255, 255);
+    font-size: 100%;
+
+  }
+
+  .siguiente{
+    transform: rotate(180deg);
+  }
+
+  .backbutton{
+      position: absolute;
+      left: 2.5%;
+  }
+
+  .botonSiguiente{
+    position: absolute;
+    right: 2.5%;
+  }

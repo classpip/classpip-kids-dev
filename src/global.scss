@@ -1,0 +1,516 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+
+
+/* ++++++++++++++++++++++++ 2.7 JUEGO COLECCION +++++++++++++++++++++++++++*/
+.juegocoleccion-content {
+    --background: #fffafaff;
+    text-align: center;
+    /* entire container, keeps perspective */
+      .logo-liga {
+        margin-top: 10%;
+      }
+      h2 {
+        font-size: 14px;
+        color: #354f7bff;
+        margin-top: -8px;
+      }
+      .card-cromo {
+        width: 312px;
+        height: 450px;
+        background: mediumspringgreen;
+        border-radius: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+      .card-cromo-reves {
+        width: 312px;
+        height: 450px;
+        background-color: mediumspringgreen;
+        border-radius: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .MeFalta-bg {
+        width: 312px;
+        height: 450px;
+        background: lightgrey;
+        border-radius: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+          opacity: 0.3;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+      .falta-cromo-reves {
+        width: 312px;
+        height: 450px;
+        background-color: lightgrey;
+        border-radius: 10px;
+      }
+      .cofre-icono {
+        margin-top: 10%;
+        width: 70px;
+        margin: auto;
+        margin-bottom: 30%;
+        margin-top: 10%;
+      }
+      #box {
+        width: 90%;
+        position: relative;
+        margin: auto;
+      }
+      .ranking-acordeon {
+        background: aquamarine;
+        margin: auto;
+        margin-bottom: 3%;
+        width: 100%;
+        .span{
+          display: flex;
+          align-items: center;
+        }
+        .mat-expansion-panel-header.mat-expanded {
+          background: cadetblue;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+          h2{
+            color: white;
+            font-size: 17px;
+          }
+          .avatar {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border: 2px solid;
+            border-color: greenyellow;
+          }
+        }
+        .mat-expansion-panel-content {
+          background: rgba(47, 79, 79, 0.4);
+          display: flex;
+          .mat-expansion-panel-body {
+            margin-top: 15px;
+          }
+        }
+        .avatar {
+          width: 40px;
+          height: 40px;
+          margin-right: 20px;
+          border: 2px solid;
+          border-color: white;
+        }
+      }
+      .opciones-ranking {
+        display: flex;
+      }
+      .ranking-alumno-btn {
+        width: 200px;
+        text-transform: initial;
+      }
+      // para mostrar los alumnos de cada grupo
+      .alumnos-grupo {
+        display: flex;
+        margin: auto;
+        .alumno-image {
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .border {
+            border: 3px solid lightpink;
+            border-radius: 50%;
+            width: fit-content;
+            background-color: bisque;
+            .img-box {
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
+              overflow: hidden;
+            }
+          }
+          p {
+            color: #354f7b;
+            font-weight: bold;
+          }
+          .border-conectado {
+              border: 3px solid rgb(64, 98, 155);
+              border-radius: 50%;
+              width: fit-content;
+              background-color: lightblue;
+            .img-box {
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+      .coleccion-equipo {
+        margin-bottom: 15%;
+        h2 {
+          font-size: 15px;
+          color: #354f7bff;
+        }
+      }
+    }
+  
+    .flip-card-container {
+      width: 468px;
+      height: 675px;
+      margin-top: 15%;
+      margin-bottom: 15%;
+    }
+  
+    /* Esta és la parte css del efecto flip para los cromos */
+    .flip-card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 1.5s; // time duration of the flip
+      transform-style: preserve-3d; // Specifies that child elements will preserve its 3D position
+    }
+    .flip-card-container:hover .flip-card {
+      transform: rotateY(180deg);
+    }
+    /* Position the front and back side */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .flip-card-front {
+      background-color: transparent;
+      color: #fff;
+    }
+    .flip-card-back {
+      background-color: transparent;
+      color: #fff;
+      transform: rotateY(180deg);
+      width: 100%;
+      height: 100%;
+      .card-content-md {
+        padding-left: unset;
+        padding-right: unset;
+        -webkit-padding-start: unset;
+        padding-inline-start: unset;
+        -webkit-padding-end: unset;
+        padding-inline-end: unset;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+    }
+  
+  /* ++++++++++++++++++++++++ 2.8 CAMBIAR CROMOS +++++++++++++++++++++++++++*/
+  
+  .intercambiarcromos-content {
+    text-align: center;
+  }
+
+  /* ++++++++++++++++++++++++ 2.5 PUNTOS +++++++++++++++++++++++++++*/
+
+ .puntos-content{
+  text-align: center;
+  #alumno-ranking {
+    overflow: auto;
+  }
+
+  .ranking-acordeon {
+    background: aquamarine;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 3%;
+    .span{
+      display: flex;
+      align-items: center;
+    }
+    .mat-expansion-panel-header.mat-expanded {
+      background: cadetblue;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      h2{
+        color: white;
+        font-size: 17px;
+      }
+      .avatar {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border: 2px solid;
+        border-color: greenyellow;
+      }
+    }
+    .mat-expansion-panel-content {
+      background: rgba(47, 79, 79, 0.4);
+      display: flex;
+      .mat-expansion-panel-body {
+        margin-top: 15px;
+      }
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
+      border: 2px solid;
+      border-color: white;
+    }
+  }
+  .puntos-list-bg {
+    background: transparent;
+    ion-item {
+      --background: transparent;
+      h2 {
+        font-size: 15px;
+        color: black;
+      }
+    }
+  }
+  .nivel-puntos {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      font-size: 15px;
+      margin: auto;
+      margin-bottom: -10px;
+      color: #354f7b;
+    }
+    p {
+      border: 3px solid;
+      border-color: #354f7b;
+      border-radius: 10px;
+      background: #354f7b;
+      color: white;
+    }
+  }
+  .info-alumno{
+    .logo {
+      margin-top: 10%;
+    }
+    h2 {
+      font-size: 15px;
+      color: #354f7bff;
+    }
+    h3 {
+      font-size: 44px;
+      background: darkseagreen;
+      color: white;
+    }
+  }
+
+  .info-equipo{
+    .logo {
+      margin-top: 10%;
+    }
+    h2 {
+      font-size: 15px;
+      color: #354f7bff;
+    }
+    h3 {
+      font-size: 44px;
+      background: darkseagreen;
+      color: white;
+    }
+    .alumnos-grupo {
+      display: flex;
+      margin: auto;
+      .alumno-image {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .border {
+          border: 3px solid lightpink;
+          border-radius: 50%;
+          width: fit-content;
+          background-color: bisque;
+          .img-box {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+          }
+        }
+        p {
+          color: #354f7b;
+          font-weight: bold;
+        }
+        .muestra-puntos-equ{
+          p{
+            color: white;
+          }
+        }
+        .border-conectado {
+          border: 3px solid rgb(64, 98, 155);
+          border-radius: 50%;
+          width: fit-content;
+          background-color: lightblue;
+          .img-box {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+  .tabla-puntos {
+    .cabecera-tabla {
+      background: #17447eff;
+      color: white;
+      border-top-right-radius: 17px;
+      border-top-left-radius: 17px;
+    }
+    .casillas-tabla {
+        color: #17447eff;
+        border-left: thin solid;
+        border-right: thin solid;
+        border-bottom: thin solid;
+        border-left-color: #17447eff;
+        border-right-color: #17447eff;
+        border-bottom-color: #17447eff;
+        h1 {
+          margin: auto;
+          font-size: 15px;
+        }
+      }
+  }
+  .puntos-info {
+    position: fixed;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    padding-top: 20px;
+    background: linear-gradient(to top, #000066 -50%, #ff9999 100%);
+    transition: all 1s;
+    border-radius: 85% 85% 0 0 / 30%;
+    p {
+      color:white;
+    }
+
+    &.active {
+      height: calc(100% - 100px);
+    }
+
+    .toggle-text {
+      color: white;
+      font-size: 15px;
+    }
+
+    .info-segment{
+      margin: auto;
+      width: 70%;
+      .btn-segment{
+        color: white;
+      }
+    }
+
+    .infopuntos {
+      margin-top: 5%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      p{
+        color: black;
+        font-size: 12px;
+      }
+      h1{
+        color: white;
+        font-size: 14px;
+      }
+      img {
+        width: 100px;
+        margin-top: 20px;
+      }
+    }
+  }
+  #informacion{
+    overflow: hidden;
+  }
+/* ++++++++++++++++++++++++ 2.6 MENU-LATERAL +++++++++++++++++++++++++++*/
+
+.sidemenu-content {
+  --background: linear-gradient(to top, #000066 -50%, #ff9999 100%);
+  text-align: center;
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+  }
+  .user-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    h2 {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+      .border {
+        border: 4px solid white;
+        border-radius: 50%;
+        width: fit-content;
+        background-color: white;
+        .img-box {
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+      }
+  }
+
+  .sidemenu-items {
+    --background: transparent;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+  }
+}
+ }
+  

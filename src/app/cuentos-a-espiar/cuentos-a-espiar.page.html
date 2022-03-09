@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar class="background">
+    <ion-list-header class="texto3" >
+      CUENTOS A ESPIAR
+    </ion-list-header>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-list>
+
+      <ion-item *ngFor='let cuento of listaCuentos'>
+        <ion-avatar slot="start">
+         <!-- <img src="https://ionicframework.com/docs/demos/api/list/avatar-finn.png">--> 
+          <img src="../../assets/icon/Spy-icon.png">
+          
+        </ion-avatar>
+        <ion-label>
+          <p>Titulo: {{cuento.titulo}}</p>
+          <h2>Autor: {{cuento.autor}}</h2>
+        </ion-label>
+        <ion-button (click)="irVisorCuento(cuento.titulo)"> Visualizar Cuento </ion-button>
+      </ion-item>
+
+
+  </ion-list>
+  <ion-button class='backbutton' (click)="irMenuPrincipal()" ><ion-icon  name="arrow-back-sharp"> </ion-icon>BACK </ion-button>
+
+
+</ion-content>

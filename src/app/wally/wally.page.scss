@@ -1,0 +1,39 @@
+ button.movingbutton{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        position: absolute;
+        left : 20px;
+        top : 50px;
+    }
+    body{
+      width : 100%;
+    }
+    .ctr{
+      width : 100%;
+    height : 100%;
+    }
+    .ey{
+        width:50%;
+        height:2%;
+        margin-left:300px;
+        // top:5px;
+    }
+    .pruba{
+      text-align: center;
+      height: 100%;
+      width: 50%;
+      cursor: pointer;
+      
+    }
+
+    .grid-item { //memory_card
+
+      border: 2px solid aqua;
+      padding:0px;
+      font-size:150px;
+      text-align: center;
+      transform: scale(1);
+      cursor: pointer;  
+    }
+   

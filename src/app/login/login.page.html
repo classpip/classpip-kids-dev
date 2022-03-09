@@ -1,0 +1,38 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+<ion-content [fullscreen]="true"  padding>
+
+
+
+  <form #form="ngForm" (ngSubmit)="Autentificar();">
+    <ion-grid >
+      <ion-row color="primary" justify-content-center>
+        <ion-col    >
+          <div >
+            <!--<h1 class="login">LOGIN</h1>-->
+            <img class="logo" src="../../assets/icon/mascotaCLASSPIPKIDS.png" >
+          </div>
+          <div >
+            <h5 class="login" >Usuario</h5> 
+            <ion-item>
+              <ion-input class="login" name="text" type="text" placeholder="Usuario"  required [(ngModel)]="nombre"></ion-input>
+            </ion-item>
+             <h5 class="login">Contraseña</h5> 
+            <ion-item >
+              <ion-input class="login" name="password" type="password" placeholder="Contraseña"  required [(ngModel)]="pass" ></ion-input>
+            </ion-item>
+          </div>
+          <ion-row style="height: 30px"></ion-row>
+          <div class="padding">
+            <ion-button class="prueba" size="large"  type="submit" [disabled]="form.invalid" expand="block">LOGIN</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+
+</ion-content>
+

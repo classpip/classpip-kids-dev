@@ -1,0 +1,41 @@
+/*ion-toolbar {
+
+    --background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}*/
+
+
+
+ion-content {
+      
+    --background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    ion-button {
+        margin-top: 1em;
+        margin-bottom: 1em
+    }
+}
+
+.header{
+    
+    height: 200px;
+
+
+}
+
+.background{
+    --background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+.backbutton{
+    position: absolute;
+    left: 2.5%;
+}
+
+.texto3{
+
+    color: rgb(255, 255, 255);
+    font-size: 100%;
+
+  }

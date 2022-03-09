@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="texto1" >Classpipkids
+
+      
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding >
+
+<ion-item  *ngIf = "alumnoJuegoDeLibro">
+<ion-text > Bienvenido {{alumnoJuegoDeLibro.Nombre}} </ion-text>
+</ion-item>
+
+
+
+<ion-row style="height: 50px"></ion-row>
+<ion-button (click)="crearCuento()" >Crear Cuento </ion-button>
+<ion-button (click)="irEspiarCuentos()" >Espiar cuentos <img style="height: 20px; width: 50px;color:white;" src="../../assets/icon/espia-icono.png"></ion-button>
+<ion-button  color="warning" style=" position: absolute;" (click)="alertaCriteriosDeCuento()" ><ion-icon name="information-circle-sharp"></ion-icon></ion-button>
+<ion-row style="height: 50px"></ion-row>
+
+<ion-text class="texto1"> Este es tu cuento: </ion-text>
+
+<ion-row style="height: 50px"></ion-row>
+<ion-list>
+<ion-item *ngFor="let cuento of listaDeLibrosAlumnoJuego; let i = index" >
+  <ion-label> {{cuento.titulo}} </ion-label>
+  <ion-checkbox   [(ngModel)]="seleccionado[i]" ></ion-checkbox  > 
+</ion-item>
+
+</ion-list>
+  
+
+
+
+
+<ion-button class="botonSiguiente" (click)="irCuento()" >Siguiente <ion-icon class="siguiente"   name="arrow-back-sharp"> </ion-icon></ion-button>
+
+<!--<ion-button class="botonCentro" (click)="obtenemosLosLibrosAlumnoJuego()" >Actualizo lista</ion-button>-->
+<ion-button class="backbutton" (click)="irMisJuegos()" ><ion-icon  name="arrow-back-sharp"> </ion-icon>BACK </ion-button>
+
+</ion-content>

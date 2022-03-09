@@ -1,0 +1,155 @@
+[33mcommit 8d3e9eb977dbdf0eb734714911cfca9084439774[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mmio/master[m[33m, [m[1;31mmio/HEAD[m[33m)[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Tue Oct 5 17:06:59 2021 +0200
+
+    arreglado bug de crear escena, cambios de nombre en peticiones y arreglo estetico en crear cuento
+
+[33mcommit 1544e85099b1ec9737e7bd23d5f517ae5bd64a1d[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Fri Sep 24 14:17:19 2021 +0200
+
+    canvas arreglado tanto en tablet como en web
+
+[33mcommit 1d1aa245b2c7713fba691718695149965eb2fcda[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Fri Sep 24 13:26:45 2021 +0200
+
+    comentarios borrados
+
+[33mcommit dda6bfc041aeb0830d4f21afdefa742722239b39[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Fri Sep 24 13:20:05 2021 +0200
+
+    cambios de las peticiones get/post/borrar elementos
+
+[33mcommit bc361384b9c3c935eb9b6f953ea8376c803f04d9[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Fri Sep 24 12:28:06 2021 +0200
+
+    Crear escena y editar escena implementados correctamente
+
+[33mcommit c0d6563c882684d0ea3dd45f338ddcac84753620[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Mon Sep 20 23:25:17 2021 +0200
+
+    comentarios añadidos
+
+[33mcommit 68e95c5f22d5fa0f658099e640ef3429b13b9e79[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Sun Sep 19 22:39:36 2021 +0200
+
+    arreglado bug visor de escenas
+
+[33mcommit 15a3e2481963d18825d9b7727f22a16508d76e72[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Mon Aug 9 00:49:28 2021 +0200
+
+    Añadidos los cambios de detalles en el menu de juego
+
+[33mcommit 57bfa43d7674c3eba0a3a2587de4ab71dce7ca09[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Thu Jun 17 17:32:17 2021 +0200
+
+    Añadido el poder modificar datos de miperfil
+
+[33mcommit 88363f12c3f876c2cd3412ab6870f2d8bba3827c[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Thu Jun 17 13:14:22 2021 +0200
+
+    Añadido el modo espiar
+
+[33mcommit dc626e43a12ad80c61922996787637ebfa1f4971[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Tue Jun 1 01:39:48 2021 +0200
+
+    Versión con arreglos de bugs de las mejoras visuales, falta integrar(el editar escena y modo edicion de edu).
+
+[33mcommit 2b581b5b7a63c70ce5185d2c42f13bc34910b91b[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Mon May 31 20:09:27 2021 +0200
+
+    Versión con mejoras visuales(login,mis juegos, mis grupos y los menus).
+
+[33mcommit 8a8319dc0335d64b08e587bbd254544857be5f02[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Mon May 31 00:52:14 2021 +0200
+
+    Versión con mi perfil implementado(falta todavia mis grupos y editar escena(edu))
+
+[33mcommit 93ee77981735e31d8fd791a07138fda56fd8ac85[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Thu May 27 18:23:55 2021 +0200
+
+    Versión con la funcionalidad borrar escena(faltan arreglar algunos bugs y botones)
+
+[33mcommit 0738f9575bc58a74c0c97a459cb3e16ec928cebb[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Tue May 25 15:32:28 2021 +0200
+
+    Versión con login de inicio(funciona bien, falta autentificar) y arreglados algunos problemas de asincronismo
+
+[33mcommit 453e6fcd3302490b56d9ae66e309d09843b8c584[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Sun May 16 18:54:50 2021 +0200
+
+    Versión con login/mejoras visuales del modo crear/editar escena/bug de zindex arreglado
+
+[33mcommit b3a5316d5a02d98f05d96d7c98392d9a34d3a884[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Sat May 15 13:45:55 2021 +0200
+
+    Versión con login/menus/etc
+
+[33mcommit 927e9ce288492e40f31abc338174ee7ee2a87432[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Mon Apr 12 04:15:31 2021 +0200
+
+    Versión con la api implementada, el visor funciona y ahora faltaria el modo editar
+
+[33mcommit 9e224406e345222015fafe21aaf0834a67dcb71b[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Sun Apr 11 20:00:11 2021 +0200
+
+    Versión con la api implementada haciendo el visor
+
+[33mcommit 942c1ff1a3d5aa9af07edc88a19da52d2375673f[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Sun Apr 11 16:00:27 2021 +0200
+
+    Versión con la api implementada(solo falta el guardar las escenas y la manipulacion de objetos en la api)
+
+[33mcommit 3ec43b892812d3abdea65c930f2bb86cd6562c49[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Tue Mar 23 17:48:27 2021 +0100
+
+    Versión que ya podemos manejar varios elementos de la API a la vez v2
+
+[33mcommit 4dc330ed335fb972b1154f8ede0bfc41f59c7cf6[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Mon Mar 22 16:05:55 2021 +0100
+
+    Versión que ya podemos manejar varios elementos de la API a la vez
+
+[33mcommit 20239429e735c3647dbb77f6ab69adc619e375a3[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Sun Mar 21 23:44:12 2021 +0100
+
+    Versión que ya absorbe los recursos de la API
+
+[33mcommit 1d5911c30eb3d1c8137fe5b832a28a5622fb4a36[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Wed Mar 17 19:23:15 2021 +0100
+
+    Version proyecto manejar cuadrado con todo
+
+[33mcommit f9a27fbe4d283a9685fc506ae270f44dee2c46a0[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Tue Mar 16 20:12:42 2021 +0100
+
+    Version proyecto manejar cuadrado
+
+[33mcommit a990fc636b3433a1487b0ecda8f4952821349dd2[m
+Author: juancarlosgarcia96 <78667978+juancarlosgarcia96@users.noreply.github.com>
+Date:   Tue Mar 2 18:29:21 2021 +0100
+
+    Initial commit

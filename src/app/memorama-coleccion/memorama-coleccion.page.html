@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>memoramagame</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="preparado && Cartaspartedetras">
+
+      <div class="grid-container">
+
+        <div  (click)="click(i)" class="grid-item" *ngFor="let elem of Cartaspartedetras;let i = index">
+                    
+              <img  class = "redimensiondetras" [src]="Cartaspartedetras[i]" >
+              <img  class = "redimensiondelante" [src]="damecartasdelafamilia[i]">
+          
+        </div>
+      
+      </div>
+   </div>
+
+</ion-content>
+
+
+
+      <!-- <ion-slides  #slides [options]="sliderConfig" (ionSlideWillChange)="doCheck()" (ionSlideDidChange)="ionSlideDidChange($event)" > 
+          <ion-slide   *ngFor="let elem of damecartasdelafamilia;let i = index">  
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img class = "cromoTengo" [src]="damecartasdelafamilia[i]"  >
+                </div> -->
+                <!-- <div class="flip-box-back">
+                  <img  class = "cromoTengo" [src]="cromosQueTengoImagenDetras[i]" >
+                </div> -->
+              <!-- </div>
+            </div>
+        </ion-slide> -->
+        <!-- ///////////////////////////////////////////////COMENTAO PA EXPLICAR DRIVE -->
+        <!-- <ion-slide  (click) = "RegalarCromo(elem, i)"  *ngFor="let elem of cromosSinRepetidos;let i = index">  
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img class = "cromoTengo" [src]="cromosQueTengoImagenDelante[i+1]"  >
+              </div>
+              <div class="flip-box-back">
+                <img  class = "cromoTengo" [src]="cromosQueTengoImagenDetras[i+1]" >
+              </div>
+            </div>
+          </div>
+      </ion-slide>
+      <ion-slide  (click) = "RegalarCromo(elem, i)"  *ngFor="let elem of cromosSinRepetidos;let i = index">  
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img class = "cromoTengo" [src]="cromosQueTengoImagenDelante[i+2]"  >
+            </div>
+            <div class="flip-box-back">
+              <img  class = "cromoTengo" [src]="cromosQueTengoImagenDetras[i+2]" >
+            </div>
+          </div>
+        </div>
+    </ion-slide> -->
+         <!-- ///////////////////////////////////////////////COMENTAO PA EXPLICAR DRIVE -->
+
+       <!-- y ahora los que no tiene todavia  -->
+         <!-- <ion-slide *ngFor="let elem of cromosQueNoTengo;let i = index">
+           <div>
+                <img class = "cromoNoTengo" [src]="cromosQueNoTengoImagenDelante[i]" >
+              </div>
+              
+        </ion-slide> 
+      </ion-slides> 
+    </div>
+
+
+
+  </div> -->
+<!-- </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>{{text}}</ion-title>
+  </ion-toolbar>
+</ion-footer> -->

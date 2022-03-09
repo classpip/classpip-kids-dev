@@ -1,0 +1,126 @@
+
+
+
+
+  ion-content {
+      
+    --background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    //--background: url(https://upload.wikimedia.org/wikipedia/commons/d/d7/Los_Angeles%2C_CA_from_the_air.jpg) no-repeat top center/cover fixed, #fff;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    ion-button {
+        margin-top: 1em;
+        margin-bottom: 1em
+    }
+}
+
+ion-toolbar {
+    --background: transparent;
+}
+
+ion-chip {
+    --background: #9dc912;
+    --color: #fff;
+}
+
+.card {
+    margin: 0 auto;
+
+    .header {
+        height: 200px; // 20vh;
+
+        .avatar {
+            width: 160px; //40vw
+            height: 160px;
+            position: relative;
+            margin: 0 auto;
+
+            img {
+                display: block;
+                border-radius: 50%;
+                position: absolute;
+                bottom: calc(-1*(80px + 4px)); // -42px;
+                border: 8px solid #3dc912;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+
+
+.card-body {
+    background-color: #ffffff;
+    padding: 30px;
+
+    overflow: hidden;
+
+    .user-meta {
+        padding-top: 40px;
+
+        .playername {
+            font-size: 24px;
+            font-weight: 600;
+            color: #303940;
+        }
+
+        .country {
+            font-size: 90%;
+            color: #949ea6;
+            text-transform: uppercase;
+            margin: 0 auto;
+        }
+    }
+}
+
+.texto1{
+
+    color: #0408db;
+   // font-weight: bold;
+    text-align: center;
+}
+
+.texto2{
+
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+.textoInput{
+    --justify-content: center;
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 2px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.hola{
+    display: flex;
+    justify-content: center;
+}
+
+.native-input sc-ion-input-md{
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    margin: 2px;
+
+}
+
+
+
+.texto3{
+
+    color: rgb(255, 255, 255);
+    font-size: 100%;
+
+  }
+
+  

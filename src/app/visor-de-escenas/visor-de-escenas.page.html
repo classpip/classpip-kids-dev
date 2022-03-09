@@ -1,0 +1,42 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title class="texto1">Visor De Escenas</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-slides>
+		<ion-slide *ngFor="let imageP of listaEscenasVisor2; let i = index">
+			<div class="slide">
+				<img src="{{imageP.url}}" class="center" />
+				<ion-row> Escena {{i}}</ion-row>
+			</div>
+
+			<div>
+				<ion-button
+					*ngIf="!this.espiando"
+					(click)="eliminarEscena(imageP.nombre,i)"
+					color="danger"
+				>
+					<ion-icon name="trash-bin-sharp"></ion-icon>
+				</ion-button>
+			</div>
+			<div>
+				<ion-button
+					*ngIf="!this.espiando"
+					(click)="editarEscena(imageP.nombre)"
+					color="warning"
+					><ion-icon name="pencil-sharp"></ion-icon>
+				</ion-button>
+			</div>
+		</ion-slide>
+	</ion-slides>
+	<ion-grid>
+		<ion-button *ngIf="!this.espiando" (click)="Atras()"
+			><ion-icon name="arrow-back-sharp"></ion-icon>Volver
+		</ion-button>
+		<ion-button *ngIf="this.espiando" (click)="AtrasEspia()"
+			><ion-icon name="arrow-back-sharp"></ion-icon>Volver
+		</ion-button>
+	</ion-grid>
+</ion-content>

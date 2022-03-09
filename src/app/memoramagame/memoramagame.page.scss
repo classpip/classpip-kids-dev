@@ -1,0 +1,42 @@
+.grid-container { //memory_game
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: white;
+    padding:150px;
+    grid-gap:20px;
+    perspective:1000px;
+  
+  }
+  
+  .grid-item { //memory_card
+  
+    border: 2px solid aqua;
+    position:relative;
+    padding:0px;
+    font-size:150px;
+    text-align: center;
+    transform: scale(1);
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition:transform .5s;
+  
+  }
+
+  img.redimensiondetras { //back-face
+    width:100px;
+    height:160px;
+    position: absolute;
+    background:white;
+    backface-visibility: hidden;
+    
+  
+  
+  }
+  
+  img.redimensiondelante { //front-face
+    width:100px;
+    height:120px;
+    transform:rotateY(180deg);
+    
+  
+  }

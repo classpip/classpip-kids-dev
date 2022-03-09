@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar class="background" >
+    <ion-list-header class="texto3" >
+      MIS GRUPOS
+    </ion-list-header>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <ion-list>
+
+ 
+  <div *ngIf = "listaGrupos">
+  <ion-item *ngFor="let grupo of listaGrupos; let i = index">
+    <ion-avatar slot="start">
+     <!-- <img src="https://ionicframework.com/docs/demos/api/list/avatar-finn.png">--> 
+      <img src="../../assets/icon/groups.png">
+      
+    </ion-avatar>
+    <ion-label>
+      <h2>Nombre: {{grupo.Nombre}}</h2>
+      <h3>Grupo: {{grupo.id}} </h3>
+      <p>Descripción: {{grupo.Descripcion}}  </p>
+    </ion-label>
+
+   
+     
+  </ion-item>
+
+</div>
+</ion-list>
+  <ion-button class='backbutton' (click)="irMenuPrincipal()" ><ion-icon  name="arrow-back-sharp"> </ion-icon>BACK </ion-button>
+</ion-content>

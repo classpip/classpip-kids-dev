@@ -1,0 +1,53 @@
+<ion-header class="juegos-header">
+  <ion-toolbar class="header-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button class="menu-btn"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Colecciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="juegocoleccion-content" #content>
+
+  <div *ngIf="preparado && coleccion">
+    <ion-button class="ranking-btn" (click)=MostrarAlbum()>Ver album</ion-button>
+    <div  *ngIf = "coleccion.DosCaras"  >
+
+      <ion-slides  #slides [options]="sliderConfig" (ionSlideWillChange)="doCheck()" (ionSlideDidChange)="ionSlideDidChange($event)" >    <!-- pager loop slidesPerView="2" -->
+
+        <!-- Prinero muestro los cromos que tiene el alumno -->
+        <!-- Si hace click es que quiere regalar el cromo -->
+       
+          <ion-slide  (click) = "RegalarCromo(elem, i)"  *ngFor="let elem of cromosSinRepetidos;let i = index">  
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img class = "cromoTengo" [src]="cromosQueTengoImagenDelante[i]"  >
+                </div>
+                <div class="flip-box-back">
+                  <img  class = "cromoTengo" [src]="cromosQueTengoImagenDetras[i]" >
+                </div>
+              </div>
+            </div>
+        </ion-slide>
+        
+       <!-- y ahora los que no tiene todavia  -->
+         <ion-slide *ngFor="let elem of cromosQueNoTengo;let i = index">
+           <div>
+                <img class = "cromoNoTengo" [src]="cromosQueNoTengoImagenDelante[i]" >
+              </div>
+              
+        </ion-slide> 
+      </ion-slides> 
+    </div>
+
+
+
+  </div>
+<!-- </div> -->
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>{{text}}</ion-title>
+  </ion-toolbar>
+</ion-footer>

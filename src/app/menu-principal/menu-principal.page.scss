@@ -1,0 +1,65 @@
+
+.padding{
+  
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .boton1{
+    position: absolute;
+    left: 0.5%;
+    top: 30%;
+    width: 300px;
+    height: 100px;
+  }
+
+  .boton2{
+    position: absolute;
+    
+    top: 30%;
+    width: 300px;
+    height: 100px;
+  }
+
+  .boton3{
+    position: absolute;
+    right: 0.5%;
+    top: 30%;
+    width: 300px;
+    height: 100px;
+  }
+
+
+  ion-content {
+    --background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    position: absolute;
+    //top: 15%;
+    
+    
+  }
+
+  .backbutton{
+    position: absolute;
+    top: 90%;
+    left: 2.5%;
+
+  }
+
+  .posicion-icono{
+    
+    position: absolute;
+    top: 65%;
+
+
+  }
+
+  .texto1{
+
+    color: rgb(255, 255, 255);
+    font-size: 100%;
+
+  }
+
+  
+

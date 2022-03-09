@@ -1,0 +1,39 @@
+
+ion-content{
+
+    --background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+ion-toolbar{
+
+    --background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+}
+
+.texto1{
+    color:rgb(255,255,255);
+    font:bold;
+}
+
+.siguiente{
+
+    transform: rotate(180deg);
+}
+
+.backbutton{
+    position: absolute;
+    left: 2.5%;
+}
+
+.botonSiguiente{
+  position: absolute;
+  right: 2.5%;
+}
+
+.botonCentro{
+
+    position: absolute;
+    right: 50%;
+
+}
+
