@@ -1,0 +1,59 @@
+<ion-content>
+    <canvas id="canvas"></canvas>
+    <canvas id="helperCanvas" style="display: none;"></canvas>
+    <div id="menuItems" class="menu">
+      <div id="menu">
+        <div id="controls">
+          Dificultad <select id="difficulty" (change)="setDifficulty()">
+            <option value="Facil">Facil</option>
+            <option value="Media">Medio</option>
+            <option value="Dificil">Dificil</option>
+            <option value="Muy Dificil">Muy dificil</option>
+          </select>
+          <br>
+          <br>
+          Imagen <select id="fondo" (change)="setFondo()">
+            <option value="Pokemon">Pokemon</option>
+            <option value="Minions">Minions</option>
+            <option value="Mario Bros">Mario Bros</option>
+          </select>
+          <button ion-button color="primary" (click)="start()">Empezar</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="time"> Tiempo:
+      <span id="time"> </span>
+      <br>
+      <div>
+        <button class= "button" ion-button icon-end (click)="restart()" ion-button color="primary" [disabled]="isDisabled">
+          <ion-icon name="md-refresh"></ion-icon>
+        </button>
+        <button class= "button" ion-button icon-end (click)="showAlert()" ion-button color="primary" [disabled]="isDisabled2">
+          <ion-icon name="information-circle"></ion-icon>
+        </button>
+        <button class= "button" ion-button icon-end (click)="showQuest()" ion-button color="primary" [disabled]="isDisabled3">
+          <ion-icon name="help"></ion-icon>
+        </button>
+      </div>
+    </div>
+  
+    <div id="endScreen" class="menu" style="display: none;">
+      <strong>Resultado</strong> 
+      <div id="modo"></div>
+      <div id="tiempo"></div>
+      <div id="ayuda"></div>
+      
+      <br>
+      <div id="scoreValue"></div>
+      <button class ="button" ion-button (click)="start()">Reiniciar Partida</button>
+    </div>
+  
+    <div id="scoresScreen" class="menu" style="display: none;">
+        <div id="scoresContainer"></div>
+        <br>
+        <button class ="button" ion-button (click)="closeScores()">Back</button>
+    </div>
+    
+    
+  </ion-content> 
