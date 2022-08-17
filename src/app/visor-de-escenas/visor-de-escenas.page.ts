@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import{DbServiceService} from 'src/app/db-service.service'
+import{DbServiceService} from 'src/app/Servicios/peticionesAPI'
 import { Router } from '@angular/router';
-import { ImagenToBackend } from '../home/clases/imagenGuardada';
-import{imagenEscena}from '../home/clases/imagenEscena';
+import { ImagenToBackend } from '../clases/imagenGuardada';
+import{imagenEscena}from '../clases/imagenEscena';
 
 @Component({
   selector: 'app-visor-de-escenas',

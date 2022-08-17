@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import{DbServiceService} from 'src/app/db-service.service'
+import{DbServiceService} from 'src/app/Servicios/peticionesAPI'
 import { Router } from '@angular/router';
-import{juegolibro} from '../home/clases/juegolibro'
+import{juegolibro} from '../clases/juegolibro'
 import { AlertController } from '@ionic/angular';
 import { element } from 'protractor';
 import { CalculosService } from '../Servicios/calculo.coleccion';

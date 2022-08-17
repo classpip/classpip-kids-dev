@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{DbServiceService} from 'src/app/db-service.service'
+import{DbServiceService} from 'src/app/Servicios/peticionesAPI'
 import { Router } from '@angular/router';
 import { AlertController, LoadingController } from '@ionic/angular';
 

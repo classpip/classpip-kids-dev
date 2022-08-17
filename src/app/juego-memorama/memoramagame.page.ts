@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DbServiceService } from '../db-service.service';
+import { DbServiceService } from '../Servicios/peticionesAPI';
 import * as URL from '../URLS/urls';
 
 

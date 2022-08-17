@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {RecursoLibro} from '../app/home/clases/recursoLibro';
-import{RecursoLibroJuego} from'../app/home/clases/recursoLibroJuego';
+import {RecursoLibro} from '../clases/recursoLibro';
+import{RecursoLibroJuego} from'../clases/recursoLibroJuego';
 import { ResponseContentType, Http} from '@angular/http';
-import {Alumnojuegodecuento} from '../app/home/clases/Alumnojuegodecuento';
-import{Libro} from '../app/home/clases/libro';
-import{imagenEscena}from '../app/home/clases/imagenEscena';
-import{juegolibro}from '../app/home/clases/juegolibro';
-import { Alumno } from './home/clases/alumno';
-import { alumnojuegomemorama } from './alumnojuegomemorama';
+import {Alumnojuegodecuento} from '../clases/Alumnojuegodecuento';
+import{Libro} from '../clases/libro';
+import{imagenEscena}from '../clases/imagenEscena';
+import{juegolibro}from '../clases/juegolibro';
+import { Alumno } from '../clases/alumno';
+import { alumnojuegomemorama } from '../clases/alumnojuegomemorama';
 
 @Injectable({
   providedIn: 'root'

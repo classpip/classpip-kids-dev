@@ -8,14 +8,14 @@ import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { stringify } from 'querystring';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
-import { DbServiceService } from '../db-service.service';
+import { DbServiceService } from './peticionesAPI';
 import { element } from 'protractor';
-import { Album } from '../home/clases/Album';
-import { AlbumEquipo } from '../home/clases/Albumequipo';
-import { TablaAlumnoJuegoDePuntos } from '../home/clases/TablaAlumnoJuegoDePuntos';
-import { TablaEquipoJuegoDePuntos } from '../home/clases/TablaEquipoJuegoDePuntos';
-import { TablaHistorialPuntosEquipo } from '../home/clases/clasesParaTablasJuegoDePuntos/TablaHistorialPuntosEquipo';
-import { TablaHistorialPuntosAlumno } from '../home/clases/clasesParaTablasJuegoDePuntos/TablaHistorialPuntosAlumno';
+import { Album } from '../clases/Album';
+import { AlbumEquipo } from '../clases/Albumequipo';
+import { TablaAlumnoJuegoDePuntos } from '../clases/TablaAlumnoJuegoDePuntos';
+import { TablaEquipoJuegoDePuntos } from '../clases/TablaEquipoJuegoDePuntos';
+import { TablaHistorialPuntosEquipo } from '../clases/clasesParaTablasJuegoDePuntos/TablaHistorialPuntosEquipo';
+import { TablaHistorialPuntosAlumno } from '../clases/clasesParaTablasJuegoDePuntos/TablaHistorialPuntosAlumno';
 
 @Injectable({
   providedIn: 'root'

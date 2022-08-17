@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { DbServiceService } from '../db-service.service';
+import { DbServiceService } from '../Servicios/peticionesAPI';
 import { CalculosService } from '../Servicios/calculo.coleccion';
-import { TablaEquipoJuegoDePuntos } from '../home/clases/TablaEquipoJuegoDePuntos';
+import { TablaEquipoJuegoDePuntos } from '../clases/TablaEquipoJuegoDePuntos';
 import { IonContent } from '@ionic/angular';
 import { SesionService } from '../Servicios/sesion.service';
-import { TablaAlumnoJuegoDePuntos } from '../home/clases/TablaAlumnoJuegoDePuntos';
+import { TablaAlumnoJuegoDePuntos } from '../clases/TablaAlumnoJuegoDePuntos';
 
 
 @Component({
