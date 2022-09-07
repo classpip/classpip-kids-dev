@@ -17,8 +17,8 @@ import { alumnojuegomemorama } from '../clases/alumnojuegomemorama';
 export class DbServiceService {
 
   //private base='http://192.168.1.65:3000';
-  // private base='http://localhost:3000';
-  private base= 'http://147.83.118.92:3000';
+   private base='http://localhost:3000';
+  //private base= 'http://147.83.118.92:3000';
 
   private APIUrlhost = 'http://localhost:3000/api/Profesores/8/recursosLibros';
 
@@ -41,6 +41,9 @@ export class DbServiceService {
 
   private APIRUrlJuegoDeMemorama = this.base + '/api/juegosDeMemorama';
   private APIurlAlumnoJuegoMemorama = this.base+'/api/alumnosJuegoDeMemorama';
+
+  private APIRUrlJuegoDePuzzle = this.base + '/api/juegosDePuzzle';
+  private APIurlAlumnoJuegoPuzzle = this.base+'/api/alumnosJuegoDePuzzle';
 
   private APIurlCartas = this.base+'/api/cartasMemorama';
 
@@ -370,6 +373,16 @@ public DimesiAlumnoEsdelJuegoMemorama(juegoDeMemoramaId:any,alumnoId: any): Obse
  public DameJuegoDeMemorama(): Observable<any[]>{
    console.log (' voy a buscar memorama ', this.APIRUrlJuegoDeMemorama)
    return this.http.get<any[]>(this.APIRUrlJuegoDeMemorama);
+ }
+
+ public DameJuegoDePuzzle(): Observable<any[]>{
+  console.log (' voy a buscar puzzle ', this.APIRUrlJuegoDePuzzle)
+  return this.http.get<any[]>(this.APIRUrlJuegoDePuzzle);
+}
+
+public DimesiAlumnoEsdelJuegoPuzzle(juegoDePuzzleId:any,alumnoId: any): Observable<any[]> {
+  console.log(this.APIurlAlumnoJuegoPuzzle + '?filter[where][juegoDePuzzleId]=' + juegoDePuzzleId + '&filter[where][alumnoId]=' + alumnoId);
+  return this.http.get<any>(this.APIurlAlumnoJuegoPuzzle + '?filter[where][juegoDePuzzleId]=' + juegoDePuzzleId + '&filter[where][alumnoId]=' + alumnoId);
  }
 
  public Damecartasdelafamilia(familiaId:any): Observable<any[]>{
