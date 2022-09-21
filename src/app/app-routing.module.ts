@@ -64,6 +64,10 @@ const routes: Routes = [
     loadChildren: () => import('./inicio-juego-puntos/inicio-juego-puntos.module').then( m => m.InicioJuegoPuntosPageModule)
   },
   {
+    path: 'juego-puzzle',
+    loadChildren: () => import('./juego-puzzle/juego-puzzle.module').then( m => m.JuegoPuzzlePageModule)
+  },
+  {
     path: 'memorama-coleccion',
     loadChildren: () => import('./memorama-coleccion/memorama-coleccion.module').then( m => m.MemoramaColeccionPageModule)
   },

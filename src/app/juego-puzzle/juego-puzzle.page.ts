@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, AlertController } from '@ionic/angular';
+import { DbServiceService } from '../Servicios/peticionesAPI';
+import { alumnojuegopuzzle } from '../clases/alumnojuegopuzzle';
 
 @Component({
   selector: 'app-juego-puzzle',
@@ -8,7 +10,6 @@ import { NavController, AlertController } from '@ionic/angular';
 })
 export class JuegoPuzzlePage implements OnInit {
 
-  isDisabled= true;
   isDisabled2= true;
   isDisabled3= true;
   correcto= false;
@@ -21,6 +22,7 @@ export class JuegoPuzzlePage implements OnInit {
 
   constructor(
     public navCtrl: NavController,
+    private dbService:DbServiceService,
     private alertCtrl: AlertController
   ) {}
 
@@ -31,20 +33,25 @@ export class JuegoPuzzlePage implements OnInit {
   
     HELPER_CANVAS = document.getElementById('helperCanvas')
     HELPER_CONTEXT = HELPER_CANVAS.getContext("2d")
-  
+
+    showStartScreen()
     addEventListeners()
-    this.setFondo
+    this.setFondo()
     addEventListeners()
-    this.setDifficulty
+    this.setDifficulty()
     addEventListeners()
-  
-    //if (MINION == true) {
-     IMAGE.src = '../assets/img/pikachu.jpg' 
-    //} else if (POKEMON == true) {
-     // IMAGE.src = '../assets/imgs/pikachu.jpg'
-   // }
-    
-  
+
+    let NombreImagen = localStorage.getItem("NombreImagen")
+    this.dbService.DameImagendePuzzle(NombreImagen)
+      .subscribe(response => {
+        console.log("ENTRA")
+        const blob = new Blob([response.blob()], { type: 'image/jpg' });
+        const imgURL = URL.createObjectURL(blob)
+        IMAGE.src = imgURL
+      });
+      
+    IMAGE.src = '../assets/img/pikachu.jpg' 
+
     IMAGE.onload = function () {
       handleResize()
       window.addEventListener('resize', handleResize)
@@ -56,24 +63,24 @@ export class JuegoPuzzlePage implements OnInit {
 
 
   setDifficulty() {
-    this.isDisabled = true;
     this.isDisabled2 = true;
     this.isDisabled3 = true;
     
 
-    let diff = (<HTMLInputElement>document.getElementById('difficulty')).value
+    let diff = localStorage.getItem("dificultad")
     SELECTED_PIECE = null;
+    console.log(diff)
     switch (diff) {
-      case "Facil":
+      case "facil":
         initializePieces(3, 3)
         break
-      case "Media":
+      case "media":
         initializePieces(5, 5)
         break
-      case "Dificil":
+      case "dificil":
         initializePieces(10, 10)
         break
-      case "Muy Dificil":
+      case "muy dificil":
         initializePieces(25, 25)
         break
 
@@ -82,13 +89,12 @@ export class JuegoPuzzlePage implements OnInit {
   }
 
   setFondo() {
-    this.isDisabled = true;
     this.isDisabled2 = true;
     this.isDisabled3 = true;
 
-    let diff = (<HTMLInputElement>document.getElementById('fondo')).value
+    let fondo = (<HTMLInputElement>document.getElementById('fondo')).value
     SELECTED_PIECE = null;
-    switch (diff) {
+    switch (fondo) {
       case "Pokemon":
         IMAGE.src = '../assets/imgs/pikachu.jpg'
         break 
@@ -103,7 +109,6 @@ export class JuegoPuzzlePage implements OnInit {
   }
 
   start() {
-    this.isDisabled = false;
     this.isDisabled2 = false;
     this.isDisabled3 = false;
     START_TIME = new Date().getTime()
@@ -111,34 +116,6 @@ export class JuegoPuzzlePage implements OnInit {
     randomizePieces()
     document.getElementById("menuItems").style.display = "none"
     document.getElementById("endScreen").style.display = "none"
-  }
-
-  async restart() {
-    let alert = await this.alertCtrl.create({
-      
-      header: 'Seguro que quieres reiniciar partida?',
-      buttons: [
-        { 
-          text: 'NO',
-          role: 'NO',
-          handler: () => {
-            
-          }
-        },
-        {
-          text: 'SI',
-          role: 'SI',
-          handler: () => {
-            START_TIME = new Date().getTime()
-            END_TIME = null
-            randomizePieces()
-            document.getElementById("menuItems").style.display = "none"
-          }
-        }
-      ]
-    });
-    await alert.present();
-    
   }
 
   async showAlert() {
@@ -198,12 +175,6 @@ let SELECTED_PIECE = null
 let START_TIME = null
 let END_TIME = null
 let TIME = null
-
-let POP_SOUND = new Audio("../assets/sounds/pop.mp3")
-POP_SOUND.volume = 0.5
-
-let COMPLETE_SOUND = new Audio("../assets/sounds/complete.mp3")
-COMPLETE_SOUND.volume = 0.2
 
 
 function updateTime() {
@@ -313,7 +284,6 @@ function onMouseUp() {
       if (isComplete() && END_TIME == null) {
         let now = new Date().getTime()
         END_TIME = now
-        COMPLETE_SOUND.play()
         showEndScreen();
         
       }
@@ -341,7 +311,7 @@ function getPressedPieceByColor(loc, color) {
 
   for (let i = PIECES.length - 1; i >= 0; i--) {
     if (PIECES[i].color == color) {
-      console.log("ENTRA");
+      //console.log("ENTRA");
       
       return PIECES[i]
     }
@@ -672,7 +642,6 @@ class Piece {
     this.x = this.xCorrect
     this.y = this.yCorrect
     this.correct = true
-    POP_SOUND.play()
   }
 
 }
@@ -690,6 +659,7 @@ function showEndScreen() {
   let ayuda;
   let now = new Date().getTime()
   END_TIME = now
+
   let tiempo = Math.round(END_TIME-START_TIME)/1000
   if (SIZE.rows == 3 && SIZE.columns == 3) {
      puntos = 9
@@ -716,34 +686,35 @@ function showEndScreen() {
 
   document.getElementById("endScreen").style.display="block";
   document.getElementById("time").style.display="block";
+
+  let alumnoID = parseInt(localStorage.getItem("alumnoID"))
+  let juegoDePuzzleId = parseInt(localStorage.getItem("juegoDePuzzleId"))
+  let puntos2 = 0
+  let Tiempo = "00:12"
+
+  let alumno = new alumnojuegopuzzle(alumnoID, juegoDePuzzleId, puntos2, Tiempo);
+  this.dbService.EstableceTiempoAlumnoPorID(alumno).subscribe();
 }
 
+function showStartScreen() {
+  let dif
+  let diff
+  dif = localStorage.getItem("dificultad")
 
-/*function showScores(){
-  document.getElementById("endScreen").style.display="none";
-  document.getElementById("scoresScreen").style.display="block";
-  document.getElementById("scoresContainer").innerHTML="Loading...";
-  //getScores();
-}*/
+  if(dif == "facil"){
+    diff = "Fácil"
+  }
+  else if (dif == "media"){
+    diff = "Media"
+  }
+  else if (dif == "dificil"){
+    diff = "Difícil"
+  }
+  else if (dif == "muy dificil"){
+    diff = "Muy difícil"
+  }
 
-/*function closesScores(){
-  document.getElementById("endScreen").style.display="block";
-  document.getElementById("scoresScreen").style.display="none";
-}*/
+  document.getElementById("difi").innerHTML="Dificultad: "+ diff;
+}
 
-/*function getScores(){
-  fetch ("sever.php".then(function(response) {
-      response.json().then(function(data) {
-          console.log(data);
-      });
-  });
-
-}*/
-
-/*function formatScores(data) {
-  let html="<table style='widht:100%;text-align:center;'>";
-  html+="<tr style='bckground:rgb(123,146,196);color:white'>";
-  html+="<td></td><td><b>Easy</b></td><td><b>Time</b></td></tr>";
-
-}*/
 

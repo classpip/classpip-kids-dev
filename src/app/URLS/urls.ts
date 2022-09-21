@@ -16,6 +16,8 @@ export const LogosEquipos = host + '3000/api/imagenes/LogosEquipos/download/';
 export const ImagenesCartas = host + '3000/api/imagenes/ImagenesCartasMemorama/download/';
 export const ImagenesCartasdetras = host + '3000/api/imagenes/ImagenesFamiliasMemorama/download/';
 
+export const ImagenesPuzzle = host + '3000/api/imagenes/ImagenesPuzzle/download/';
+
 
 
 

@@ -300,14 +300,15 @@ export class MisJuegosPage implements OnInit {
 
         else if (this.listaAuxiliar[i].Tipo === "Juego De Puzzle"){
           localStorage.setItem("juegoDePuzzleId", this.listaAuxiliar[i].id);
-          localStorage.setItem("modojuego", this.listaAuxiliar[i].ModoJuego);
           localStorage.setItem("dificultad", this.listaAuxiliar[i].Dificultad);
           localStorage.setItem("puntos", this.listaAuxiliar[i].Puntos);
           localStorage.setItem("Tiempo", this.listaAuxiliar[i].Tiempo);
+          localStorage.setItem("NombreImagen", this.listaAuxiliar[i].NombreImagen);
 
           console.log("Identificador juego Puzzle:", localStorage.getItem("juegoDePuzzleId"));
           console.log("Dificultad Puzzle:", localStorage.getItem("dificultad"));
           console.log("ModoJuego Puzzle:", localStorage.getItem("modojuego"));
+          console.log("NOMBRE IMAGEN: " + this.listaAuxiliar[i].NombreImagen)
           count = true;
           this.valori = i;
         }

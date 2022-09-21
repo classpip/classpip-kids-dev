@@ -10,6 +10,7 @@ import{imagenEscena}from '../clases/imagenEscena';
 import{juegolibro}from '../clases/juegolibro';
 import { Alumno } from '../clases/alumno';
 import { alumnojuegomemorama } from '../clases/alumnojuegomemorama';
+import { alumnojuegopuzzle } from '../clases/alumnojuegopuzzle';
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +45,7 @@ export class DbServiceService {
 
   private APIRUrlJuegoDePuzzle = this.base + '/api/juegosDePuzzle';
   private APIurlAlumnoJuegoPuzzle = this.base+'/api/alumnosJuegoDePuzzle';
+  private APIUrlImagenesPuzzle = this.base + '/api/imagenes/ImagenesPuzzle';
 
   private APIurlCartas = this.base+'/api/cartasMemorama';
 
@@ -57,13 +59,7 @@ export class DbServiceService {
   private APIUrlEquipos = this.base + '/api/Equipos';
   private APIUrlHistorialPuntosEquipo = this.base + '/api/HistorialesPuntosEquipo';
 
-
-
-
-
-
   //private APIurlJuegos= this.base +'/api/juegodelibro';
-
 
   private APIUrl = 'http://147.83.249.79:3000/api/Profesores/8/recursosLibros';
   private APIUrlProfesores='http://147.83.249.79:3000/api/Profesores';
@@ -380,6 +376,12 @@ public DimesiAlumnoEsdelJuegoMemorama(juegoDeMemoramaId:any,alumnoId: any): Obse
   return this.http.get<any[]>(this.APIRUrlJuegoDePuzzle);
 }
 
+public DameImagendePuzzle(imagen: string): Observable<any> {
+  console.log(this.APIUrlImagenesPuzzle + '/download/' + imagen)
+  return this.httpImagenes.get(this.APIUrlImagenesPuzzle + '/download/' + imagen,
+      { responseType: ResponseContentType.Blob });
+}
+
 public DimesiAlumnoEsdelJuegoPuzzle(juegoDePuzzleId:any,alumnoId: any): Observable<any[]> {
   console.log(this.APIurlAlumnoJuegoPuzzle + '?filter[where][juegoDePuzzleId]=' + juegoDePuzzleId + '&filter[where][alumnoId]=' + alumnoId);
   return this.http.get<any>(this.APIurlAlumnoJuegoPuzzle + '?filter[where][juegoDePuzzleId]=' + juegoDePuzzleId + '&filter[where][alumnoId]=' + alumnoId);
@@ -404,6 +406,13 @@ public EstablecePuntuacionAlumnoPorID(alumnojuegomemorama:alumnojuegomemorama):O
   return this.http.put<any>(this.APIurlAlumnoJuegoMemorama,alumnojuegomemorama);
 
 }
+
+public EstableceTiempoAlumnoPorID(alumnojuegopuzzle:alumnojuegopuzzle):Observable<any>{
+  console.log(this.APIurlAlumnoJuegoPuzzle,alumnojuegopuzzle);
+  return this.http.put<any>(this.APIurlAlumnoJuegoPuzzle,alumnojuegopuzzle);
+
+}
+
 public Damealumnojuegomemorama(familiaId:any,cartaid:any): Observable<any[]>{
   console.log(this.APIurlCartas+ '?filter[where][familiaId]='+familiaId+'&filter[where][id]='+cartaid);
  return this.http.get<any[]>(this.APIurlCartas+ '?filter[where][familiaId]='+familiaId+'&filter[where][id]='+cartaid);
