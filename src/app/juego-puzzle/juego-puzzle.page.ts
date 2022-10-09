@@ -19,6 +19,12 @@ export class JuegoPuzzlePage implements OnInit {
   mode_hard = false;
   mode_insane = false;
   score = 0;
+  haypregunta = false;
+  pregunta = localStorage.getItem("Pregunta")
+  respuestacorrecta = localStorage.getItem("RespuestaCorrecta")
+  respuestaincorrecta1 = localStorage.getItem("RespuestaIncorrecta1")
+  respuestaincorrecta2 = localStorage.getItem("RespuestaIncorrecta2")
+  respuestaincorrecta3 = localStorage.getItem("RespuestaIncorrecta3")
 
   constructor(
     public navCtrl: NavController,
@@ -131,28 +137,37 @@ export class JuegoPuzzlePage implements OnInit {
     this.isDisabled3 = true;
     let alert = await this.alertCtrl.create({
       header: 'QUESTION',
-      message: 'Capital de España?',
+      message: this.pregunta,
       buttons: [
         {
-          text: 'Madrid',
-          role: 'Madrid',
+          text: this.respuestaincorrecta3,
+          handler: () => {
+            
+          },
+          
+        },
+        {
+          text: this.respuestaincorrecta1,
+          handler: () => {
+            
+          },
+        },
+        {
+          text: this.respuestaincorrecta2,
+          handler: () => {
+            
+          },
+        },
+
+        {
+          text: this.respuestacorrecta,
+          role: 'respuestacorrecta',
           handler: () => {
             this.ayuda = true;
-            ColocarPieza3()
+            this.showQuest2();
           },
         },
-        {
-          text: 'Barcelona',
-          handler: () => {
-            
-          },
-        },
-        {
-          text: 'Valencia',
-          handler: () => {
-            
-          },
-        },
+
       ],
       
 
@@ -160,9 +175,22 @@ export class JuegoPuzzlePage implements OnInit {
     
   }
 
+  async showQuest2() {
+    this.isDisabled3 = true;
+    let alert = await this.alertCtrl.create({
+      header: 'Respuesta Correcta!',
+      message: 'Selecciona la pieza que quieres colocar en el puzzle',
+      buttons: ['Aceptar']
+
+    }); 
+    await alert.present();
+    ColocarPieza3()
+
+  }
+
 }
 
-
+let haypregunta = null
 let CANVAS = null
 let CONTEXT = null
 let IMAGE = new Image()
@@ -273,8 +301,16 @@ function onMouseMove(evt) {
   if (SELECTED_PIECE != null) {
     SELECTED_PIECE.x = evt.x - SELECTED_PIECE.offset.x
     SELECTED_PIECE.y = evt.y - SELECTED_PIECE.offset.y
-    //console.log(SELECTED_PIECE.x)
-  }
+    //console.log(SELECTED_PIECE)
+    if (haypregunta == true) {
+      SELECTED_PIECE.x = SELECTED_PIECE.xCorrect;
+      SELECTED_PIECE.y = SELECTED_PIECE.yCorrect;
+      haypregunta = false;
+      //SELECTED_PIECE.snap()
+      SELECTED_PIECE = null
+      //SELECTED_PIECE.isClose()
+    }
+  } 
 }
 
 function onMouseUp() {
@@ -427,18 +463,7 @@ function initializePieces(rows, cols) {
 }*/
 
 function ColocarPieza3(){
-  const rdmnumber = Math.floor(Math.random() * 5);
-  //const randomElement = PIECES[Math.floor(Math.random() * PIECES.length)];
-  
-  if(rdmnumber == 0){
-    PIECES[0].x = 75
-    PIECES[0].y = 249,125
-  } else if(rdmnumber == 1){
-
-  }else if(rdmnumber == 1){
-    PIECES[1].x = 75
-    PIECES[1].y = 249,125
-  }
+  haypregunta = true 
   
 }
 
