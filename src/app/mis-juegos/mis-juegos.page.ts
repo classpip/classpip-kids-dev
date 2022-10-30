@@ -304,6 +304,7 @@ export class MisJuegosPage implements OnInit {
           localStorage.setItem("puntos", this.listaAuxiliar[i].Puntos);
           localStorage.setItem("Tiempo", this.listaAuxiliar[i].Tiempo);
           localStorage.setItem("NombreImagen", this.listaAuxiliar[i].NombreImagen);
+          localStorage.setItem("preguntaId", this.listaAuxiliar[i].preguntaId)
 
           console.log("Identificador juego Puzzle:", localStorage.getItem("juegoDePuzzleId"));
           console.log("Dificultad Puzzle:", localStorage.getItem("dificultad"));

@@ -20,11 +20,6 @@ export class JuegoPuzzlePage implements OnInit {
   mode_insane = false;
   score = 0;
   haypregunta = false;
-  pregunta = localStorage.getItem("Pregunta")
-  respuestacorrecta = localStorage.getItem("RespuestaCorrecta")
-  respuestaincorrecta1 = localStorage.getItem("RespuestaIncorrecta1")
-  respuestaincorrecta2 = localStorage.getItem("RespuestaIncorrecta2")
-  respuestaincorrecta3 = localStorage.getItem("RespuestaIncorrecta3")
 
   constructor(
     public navCtrl: NavController,
@@ -135,32 +130,40 @@ export class JuegoPuzzlePage implements OnInit {
 
   async showQuest() {
     this.isDisabled3 = true;
+    var preguntaId = localStorage.getItem("preguntaId")
+    var listaPregunta = await this.dbService.DamePreguntasPuzzle(preguntaId).toPromise();
+    var pregunta = listaPregunta["Pregunta"]
+    var respuestacorrecta = listaPregunta["RespuestaCorrecta"]
+    var respuestaincorrecta1 = listaPregunta["RespuestaIncorrecta1"]
+    var respuestaincorrecta2 = listaPregunta["RespuestaIncorrecta2"]
+    var respuestaincorrecta3 = listaPregunta["RespuestaIncorrecta3"]
+
     let alert = await this.alertCtrl.create({
       header: 'QUESTION',
-      message: this.pregunta,
+      message: pregunta,
       buttons: [
         {
-          text: this.respuestaincorrecta3,
+          text: respuestaincorrecta3,
           handler: () => {
             
           },
           
         },
         {
-          text: this.respuestaincorrecta1,
+          text: respuestaincorrecta1,
           handler: () => {
             
           },
         },
         {
-          text: this.respuestaincorrecta2,
+          text: respuestaincorrecta2,
           handler: () => {
             
           },
         },
 
         {
-          text: this.respuestacorrecta,
+          text: respuestacorrecta,
           role: 'respuestacorrecta',
           handler: () => {
             this.ayuda = true;
