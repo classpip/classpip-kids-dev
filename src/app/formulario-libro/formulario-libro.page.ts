@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import{DbServiceService} from 'src/app/db-service.service'
+import{DbServiceService} from 'src/app/Servicios/peticionesAPI'
 import { NgForm } from '@angular/forms';
-import{Libro} from '../home/clases/libro';
-import{Alumno} from '../home/clases/alumno';
+import{Libro} from '../clases/libro';
+import{Alumno} from '../clases/alumno';
 import { AlertController, NavController } from '@ionic/angular';
-import { Alumnojuegodecuento } from '../home/clases/Alumnojuegodecuento';
+import { Alumnojuegodecuento } from '../clases/Alumnojuegodecuento';
 
 @Component({
   selector: 'app-formulario-libro',

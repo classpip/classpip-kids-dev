@@ -49,7 +49,7 @@ const routes: Routes = [
   },
   {
     path: 'cuentos-a-espiar',
-    loadChildren: () => import('./cuentos-a-espiar/cuentos-a-espiar.module').then( m => m.CuentosAEspiarPageModule)
+    loadChildren: () => import('./juego-cuentos-a-espiar/cuentos-a-espiar.module').then( m => m.CuentosAEspiarPageModule)
   },
   {
     path: 'inicio-juego-coleccion',
@@ -62,6 +62,10 @@ const routes: Routes = [
   {
     path: 'inicio-juego-puntos',
     loadChildren: () => import('./inicio-juego-puntos/inicio-juego-puntos.module').then( m => m.InicioJuegoPuntosPageModule)
+  },
+  {
+    path: 'juego-puzzle',
+    loadChildren: () => import('./juego-puzzle/juego-puzzle.module').then( m => m.JuegoPuzzlePageModule)
   },
   {
     path: 'memorama-coleccion',
@@ -82,7 +86,8 @@ const routes: Routes = [
   {
     path: 'ejemploimplementacion',
     loadChildren: () => import('./ejemploimplementacion/ejemploimplementacion.module').then( m => m.EjemploimplementacionPageModule)
-  },  {
+  },
+  {
     path: 'un-ejemplo',
     loadChildren: () => import('./un-ejemplo/un-ejemplo.module').then( m => m.UnEjemploPageModule)
   },

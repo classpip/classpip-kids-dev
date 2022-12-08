@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SesionService } from '../Servicios/sesion.service';
-import { DbServiceService } from '../db-service.service';
+import { DbServiceService } from '../Servicios/peticionesAPI';
 import * as URL from '../URLs/urls';
 
 @Component({

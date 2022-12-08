@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import{DbServiceService} from 'src/app/db-service.service';
+import{DbServiceService} from 'src/app/Servicios/peticionesAPI';
 import { AlertController, NavController } from '@ionic/angular';
-import { Alumnojuegodecuento } from '../home/clases/Alumnojuegodecuento';
+import { Alumnojuegodecuento } from '../clases/Alumnojuegodecuento';
 import { Router } from '@angular/router';
 import { LifecycleHooks } from '@angular/compiler/src/lifecycle_reflector';
 

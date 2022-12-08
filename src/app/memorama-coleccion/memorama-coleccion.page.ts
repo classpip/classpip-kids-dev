@@ -1,5 +1,5 @@
 import { Component, OnInit,ViewChild,AfterViewChecked,AfterContentChecked,ViewChildren,QueryList,ElementRef, AfterViewInit, AfterContentInit,Renderer2 } from '@angular/core';
-import{DbServiceService} from 'src/app/db-service.service';
+import{DbServiceService} from 'src/app/Servicios/peticionesAPI';
 import { CalculosService } from '../Servicios/calculo.coleccion';
 import * as URL from '../URLS/urls';
 import { IonSlides } from '@ionic/angular';

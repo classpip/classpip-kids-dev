@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{Router} from'@angular/router';
-import{DbServiceService} from 'src/app/db-service.service';
+import{DbServiceService} from 'src/app/Servicios/peticionesAPI';
 
 @Component({
   selector: 'app-mis-grupos',

@@ -9,10 +9,10 @@ import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { stringify } from 'querystring';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
-import { DbServiceService } from '../db-service.service';
+import { DbServiceService } from './peticionesAPI';
 import { element } from 'protractor';
-import { Album } from '../home/clases/Album';
-import { AlbumEquipo } from '../home/clases/Albumequipo';
+import { Album } from '../clases/Album';
+import { AlbumEquipo } from '../clases/Albumequipo';
 
 @Injectable({
   providedIn: 'root'

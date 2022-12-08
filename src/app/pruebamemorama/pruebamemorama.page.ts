@@ -1,8 +1,8 @@
 import { Component, OnInit, AfterViewInit, AfterContentInit, AfterContentChecked, AfterViewChecked } from '@angular/core';
 import { table } from 'console';
-import { DbServiceService } from 'src/app/db-service.service';
+import { DbServiceService } from 'src/app/Servicios/peticionesAPI';
 import * as URL from '../URLS/urls';
-import { alumnojuegomemorama } from '../alumnojuegomemorama';
+import { alumnojuegomemorama } from '../clases/alumnojuegomemorama';
 // import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';

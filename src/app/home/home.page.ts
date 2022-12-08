@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import interact from 'interactjs';
-import { DbServiceService } from 'src/app/db-service.service';
-import { ImagenToBackend } from '../home/clases/imagenGuardada';
-import { PersonajesPagina } from '../home/clases/PersonajesPagina';
-import { TextoCuento } from '../home/clases/TextoCuento';
+import { DbServiceService } from 'src/app/Servicios/peticionesAPI';
+import { ImagenToBackend } from '../clases/imagenGuardada';
+import { PersonajesPagina } from '../clases/PersonajesPagina';
+import { TextoCuento } from '../clases/TextoCuento';
 import { Observable } from 'rxjs';
 import { AlertController, NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { ViewChild, ElementRef } from '@angular/core';
-import { escena } from './clases/escena';
+import { escena } from '../clases/escena';
 
 @Component({
 	selector: 'app-home',

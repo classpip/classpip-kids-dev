@@ -1,0 +1,71 @@
+div {
+    --offset-bottom: auto !important;
+    --overflow: hidden;
+    overflow: hidden;
+    overscroll-behavior: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    font-family: Arial;
+}
+
+.menu {
+    width: 80vmin;
+    height: 60vmin;
+    position: absolute;
+    font-family: 'Arial Narrow';
+    font-style: normal;
+    color: aliceblue;
+    top: 50%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+    background: rgb(45, 41, 47);
+    text-align: center;
+    padding: 5vmin;
+    border: 1vmin rgba(0, 0, 0, 0.6) solid;
+    font-size: 6vmin;
+}
+.buttonwhite{
+    color: aliceblue;
+    font-size: 6vmin;
+}
+
+button {
+    font-size: 3vmin;
+    background: rgb(123, 146, 196);
+    color: rgb(10, 4, 4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: orange;
+    color: black;
+}
+
+select {
+    font-size: 7vmin;
+    font-family: 'Arial Narrow';
+    font-style: normal;
+    cursor: pointer;
+    border: none;
+    border-radius: 1vmin;
+    outline: none;
+}
+
+.time {
+    font-size: 3vmin;
+    font-family: 'Arial Narrow';
+    font-style: normal;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.menu strong {
+
+    text-decoration: underline
+}
